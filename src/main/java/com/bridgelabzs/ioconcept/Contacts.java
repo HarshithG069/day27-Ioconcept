@@ -1,39 +1,77 @@
+
 package com.bridgelabzs.ioconcept;
 
 public class Contacts {
-    public void setFirstName(String nextLine) {
+    private String firstName, lastName, address, city, state, email;
+    private int zip;
+    private long phoneNumber;
 
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setLastName(String nextLine) {
-
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setAddress(String nextLine) {
-
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setCity(String nextLine) {
-
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setState(String nextLine) {
-
+    public String getAddress() {
+        return address;
     }
 
-    public void setEmail(String nextLine) {
-
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setZip(int nextInt) {
-
+    public String getCity() {
+        return city;
     }
 
-    public void setPhoneNumber(long nextLong) {
-
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public Object getFirstName() {
-        return null;
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String toString() {
+        return ("First name: " + firstName + "\n Last name: " + lastName + "\n Address: " + address + "\n city: " + city
+                + "\n state: " +state + "\n email: " + email + "\n zip: " + zip + "\n phone number:" + phoneNumber + "");
     }
 }
