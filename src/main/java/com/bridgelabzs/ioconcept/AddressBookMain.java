@@ -13,9 +13,9 @@ public class AddressBookMain {
     static AddressBookMain details = new AddressBookMain();
 
     /**
-     * This method is search person in address book
+     * This method is view person in address book
      */
-    public void addDetails() {
+    public void addDetails() {git
         Contacts info = new Contacts();
         System.out.println("Enter the first name");
         info.setFirstName(sc.next());
