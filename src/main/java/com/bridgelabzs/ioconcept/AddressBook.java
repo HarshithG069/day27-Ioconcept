@@ -2,12 +2,13 @@ package com.bridgelabzs.ioconcept;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+ * Purpose - To add multiple contacts an Address Book System
+ */
 public class AddressBook {
     ArrayList<Contacts> arrayDetails = new ArrayList<Contacts>();
     static Scanner sc = new Scanner(System.in);
-
-    /**
+    /*
      * This method is used to add details to address book
      */
     public void addDetails() {
@@ -35,6 +36,10 @@ public class AddressBook {
     /**
      *This method is used to edit the details in address book
      */
+
+    public void display(){
+        System.out.println(arrayDetails);
+    }
 
     public void editDetails() {
         System.out.println("Confirm your first name to edit details: ");
@@ -105,12 +110,12 @@ public class AddressBook {
         }
     }
 
-
     public static void main(String[] args) {
         AddressBook details = new AddressBook();
-        details.addDetails();
-        int i = 0;
-        while (i == 0) {
+        int  input;
+        int ans;
+        Scanner scanner = new Scanner(System.in);
+        do {
             System.out.println("Welcome to Address Book Program");
             System.out.println("What do you want to do: ");
             System.out.println("1.Add details.\n2.Edit details.\n3.Delete Details.");
@@ -126,10 +131,11 @@ public class AddressBook {
                     details.deleteDetails();
                     break;
                 default:
-                    i = 1;
-                    System.out.println("Wrong option");
+                    System.out.println("Invalid! option");
                     break;
             }
-        }
+            System.out.println("Do you want to continue?(0/1)");
+            ans=scanner.nextInt();
+        }while(ans==1);
     }
 }
