@@ -13,7 +13,7 @@ public class AddressBookMain {
     static AddressBookMain details = new AddressBookMain();
 
     /**
-     * This method is used to add details to address book
+     * This method is search person in address book
      */
     public void addDetails() {
         Contacts info = new Contacts();
